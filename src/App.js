@@ -1,8 +1,13 @@
+import React from 'react';
+import Header from './Components/Header/Header';
+import ContentArea from './Components/UI/ContentArea/ContentArea';
+
 function App() {
   return (
-    <div>
-      <h2>Let's get started!</h2>
-    </div>
+    <React.Fragment>
+      <Header />
+      <ContentArea></ContentArea>
+    </React.Fragment>
   );
 }
 

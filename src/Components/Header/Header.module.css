@@ -1,0 +1,38 @@
+.header {
+  background-color: #7f2607;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 120px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  background-color: #34160a;
+  padding: 15px 40px;
+  color: white;
+  border-style: none;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.span {
+  padding-left: 10px;
+}
+
+.number {
+  background-color: #7f2607;
+  padding: 4px 12px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  margin-left: 4px;
+}
