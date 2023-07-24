@@ -3,19 +3,19 @@ import classes from './Menu.module.css';
 
 export default function Menu(props) {
   return (
-    <div>
+    <div className={classes.menu}>
       <form>
         <ul>
           <li className={classes.item}>
             <div>
               <h3> Sushi</h3>
-              <p>Finest fish and veggies</p>
-              <p>$22.99</p>
+              <p className={classes.description}>Finest fish and veggies</p>
+              <p className={classes.price}>$22.99</p>
             </div>
-            <div>
-              <h4>Amount</h4>
-              <input type="text"></input>
-              <button type="submit"> + add </button>
+            <div className={classes['right-bloc']}>
+              <label htmlFor="amount">Amount</label>
+              <input id="amount" type="text" placeholder="1" />
+              <button type="submit"> + Add </button>
             </div>
           </li>
         </ul>

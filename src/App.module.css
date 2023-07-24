@@ -1,0 +1,7 @@
+.img {
+  height: 300px;
+  width: 100%;
+  display: block;
+  z-index: -1;
+  border-bottom-right-radius: 100%;
+}

@@ -1,8 +1,10 @@
 .intro-div {
   background-color: #323132;
+  margin-top: -160px;
   margin-left: auto;
   margin-right: auto;
-  width: 600px;
+  width: 50%;
+  font-size: 14px;
   text-align: center;
   color: white;
   padding: 20px;
@@ -11,6 +13,7 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-
+  position: relative;
+  z-index: 2;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 1.1);
 }
