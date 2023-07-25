@@ -8,8 +8,9 @@ export default function Cart(props) {
 
   console.log('cartItems', cartItems);
 
-  function amountHandler() {}
-  function updateCartHandler() {}
+  function orderHandler() {
+    console.log('ordering..............');
+  }
 
   function plusHandler(id, price) {
     ctx.incrementItem(id, price);
@@ -20,60 +21,57 @@ export default function Cart(props) {
   }
 
   return (
-    <div className={classes.cart}>
-      <ul>
-        {cartItems.map((cartItem) => (
-          <React.Fragment key={cartItem.id}>
-            <li className={classes.cartItem}>
-              <div>
-                <h3> {cartItem.mealName} </h3>
-                <p className={classes.price}>${cartItem.price}</p>
-                <span className={classes.amount}> x{cartItem.amount} </span>
-              </div>
-              <div className={classes['right-bloc']}>
-                <button
-                  onClick={(event) => {
-                    minusHandler(cartItem.id, cartItem.price);
-                  }}
-                >
-                  {' '}
-                  &#45;{' '}
-                </button>
-                <button
-                  onClick={(event) => {
-                    plusHandler(cartItem.id, cartItem.price);
-                  }}
-                >
-                  {' '}
-                  &#43;{' '}
-                </button>
-              </div>
-            </li>
-            <hr className={classes.rule} />
-          </React.Fragment>
-        ))}
-      </ul>
-      <div>
-        <div className={classes.total}>
-          <span> Total Amount</span>
-          <span> ${ctx.cart.totalPrice} </span>
-        </div>
-        <div className={classes.buttons}>
-          <button
-            className={classes.closeButton}
-            onClick={updateCartHandler}
-            type="submit"
-          >
-            Close
-          </button>
+    <div className={classes['cart-container']}>
+      <div className={classes.cart}>
+        <ul>
+          {cartItems.map((cartItem) => (
+            <React.Fragment key={cartItem.id}>
+              <li className={classes.cartItem}>
+                <div>
+                  <h3> {cartItem.mealName} </h3>
+                  <p className={classes.price}>${cartItem.price}</p>
+                  <span className={classes.amount}> x{cartItem.amount} </span>
+                </div>
+                <div className={classes['right-bloc']}>
+                  <button
+                    onClick={(event) => {
+                      minusHandler(cartItem.id, cartItem.price);
+                    }}
+                  >
+                    {' '}
+                    &#45;{' '}
+                  </button>
+                  <button
+                    onClick={(event) => {
+                      plusHandler(cartItem.id, cartItem.price);
+                    }}
+                  >
+                    {' '}
+                    &#43;{' '}
+                  </button>
+                </div>
+              </li>
+              <hr className={classes.rule} />
+            </React.Fragment>
+          ))}
+        </ul>
+        <div>
+          <div className={classes.total}>
+            <span> Total Amount</span>
+            <span> ${ctx.cart.totalPrice} </span>
+          </div>
+          <div className={classes.buttons}>
+            <button
+              className={classes.closeButton}
+              onClick={props.changeVisibility}
+            >
+              Close
+            </button>
 
-          <button
-            className={classes.orderButton}
-            onClick={updateCartHandler}
-            type="submit"
-          >
-            Order
-          </button>
+            <button className={classes.orderButton} onClick={orderHandler}>
+              Order
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const AuthContext = React.createContext({
+  isCardVisible: false,
   cart: {},
   updateCart: (id, mealName, price, amount) => {},
   incrementItem: () => {},
