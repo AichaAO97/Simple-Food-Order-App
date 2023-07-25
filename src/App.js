@@ -3,6 +3,7 @@ import Header from './Components/Header/Header';
 import Intro from './Components/Intro/Intro';
 import Menu from './Components/Menu/Menu';
 import mealsImage from './images/meals.jpg';
+import Cart from './Components/UI/Cart/Cart';
 import classes from './App.module.css';
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
 
       <Intro />
       <Menu />
+
+      <Cart />
     </React.Fragment>
   );
 }
