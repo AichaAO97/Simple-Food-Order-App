@@ -29,7 +29,9 @@ export default function Item(props) {
             id="amount"
             onChange={amountHandler}
             type="number"
-            placeholder="0"
+            min="1"
+            max="5"
+            defaultValue="1"
           />
           <button onClick={updateCartHandler} type="submit">
             {' '}
